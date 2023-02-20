@@ -1,0 +1,240 @@
+/* Colors and fonts */
+body {
+	background: rgb(233, 248, 249);
+    color: #181823;
+    font-size: 17px;
+    font-weight: light;
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3 {
+    font-family: 'Lora', serif;
+}
+h1 {
+	color: #537FE7;
+	font-size: 32px;
+	font-weight: 900;
+}
+h2 { 
+	color: #85CDFD;
+	font-size: 20px;
+	font-weight: lighter;
+	font-weight: 500;
+}
+a {
+	color: #537FE7;
+	text-decoration: none;
+	font-weight: bold;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+}
+a:hover {
+	color: lightblue;
+}
+
+#special { 
+	color: #FFFFFF 
+}
+
+img {
+	width: 100px;
+	border-radius: 50%;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0px;
+}
+	
+li {
+	display: inline;
+	padding: 10px;
+}
+
+i {
+	font-size: 50px;
+	color: rgb(210, 210, 210);
+}
+
+i:hover {
+	color: black;
+}
+
+/* Division design */
+
+.container {
+	width: 700px;
+	margin: 40px auto;
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  .container {
+    width: 300px;
+  }
+}
+
+.card svg {
+  height: 25px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  height: 50px;
+  width: 200px;
+}
+
+.card::before, .card::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: 0.25s linear;
+  z-index: 1;
+}
+
+.card::before {
+  content: "";
+  left: 0;
+  justify-content: flex-end;
+  background-color: #4d60b6;
+}
+
+.card::after {
+  content: "";
+  right: 0;
+  justify-content: flex-start;
+  background-color: #4453a6;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card:hover span {
+  opacity: 0;
+  z-index: -3;
+}
+
+.card:hover::before {
+  opacity: 0.5;
+  transform: translateY(-100%);
+}
+
+.card:hover::after {
+  opacity: 0.5;
+  transform: translateY(100%);
+}
+
+.card span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-family: 'Fira Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+}
+
+.card .social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.card .social-link svg {
+  text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+  transform: scale(1);
+}
+
+.card .social-link:hover {
+  background-color: rgba(249, 244, 255, 0.774);
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-white {
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+	padding: 35px;
+	margin: 35px auto;
+	text-align: center;
+}
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+button{
+  background: rgb(83, 127, 231);
+  box-shadow: 0 0 25px rgb(83, 127, 231);
+}
+
+button:hover {
+  box-shadow: 0 0 5px rgb(83, 127, 231),
+              0 0 25px rgb(83, 127, 231),
+              0 0 50px rgb(83, 127, 231),
+              0 0 100px rgb(83, 127, 231);
+}
+
+#intro p {
+	margin-bottom: 40px;
+}
